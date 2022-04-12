@@ -25,6 +25,10 @@ body {
     background-position: center;
     position: relative;
 }
+#logo {
+    width: 50%;
+    height: 50%;
+}
 .glowna {
     background-image: url('bg.png');
 }
