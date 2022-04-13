@@ -9,7 +9,6 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/newsletter.css'>
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -28,6 +27,9 @@
                     <a class="nav-link" href="o-nas.html">O nas</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="filmoteka.html">Filmoteka</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="quiz.html">Quiz</a>
                 </li>
                 <li class="nav-item">
@@ -43,17 +45,17 @@
     <div id="myModal" class="modal fade">
         <div class="modal-dialog modal-newsletter">
             <div class="modal-content">
-                <form action="/examples/actions/confirmation.php" method="post">
+                <form action="null" method="post">
                     <div class="modal-header">
                         <h4>Newsletter</h4>	
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
                     </div>
                     <div class="modal-body">					
-                        <p>Zapisz się do newslettera, aby nie przegapić startu naszego sklepu internetowego! Dodatkowo będziesz mógł zdobyć dodatkowe rabaty i jako pierwszy dowiedzieć się o promocjach!</p>
+                        <p>Zapisz się do newslettera, aby nie przegapić startu naszego sklepu internetowego! Dodatkowo będziesz mógł zdobyć rabaty i jako pierwszy dowiedzieć się o promocjach!</p>
                         <div class="input-group">
                             <input type="email" class="form-control" placeholder="Twój e-mail" required>
                             <div class="input-group-append">
-                                <input type="submit" class="btn btn-primary" value="Zapisz się">
+                                <input type="submit" class="btn btn-primary" value="Zapisz się" onclick="alert('Zostałeś zapisany.');">
                             </div>
                         </div>
                     </div>
@@ -66,7 +68,7 @@
         <div class="overlay"></div>
         <div class="description">
             <h1>Witaj na stronie poświęconej The Rock'owi!</h1>
-            <p>Na naszej stronie znajdziesz najnowsze wiadomości z życia Dwayne'a Johnsona oraz ciekawostki o jego życiu i karierze. Ponadto możesz wziąć udział w <a href="./quiz.html">Quizie</a> lub znaleźć dobry film na sobotni wieczór.</p>
+            <p>Na naszej stronie znajdziesz najnowsze wiadomości z życia Dwayne'a Johnsona oraz ciekawostki o jego życiu i karierze. Ponadto możesz wziąć udział w <a href="./quiz.html">Quizie</a> lub <a href="./losuj-film.html">znaleźć</a> dobry film na sobotni wieczór.</p>
             <p>Już niedługo otwarcie sklepu internetowego! <br/>Zapisz się do newslettera, aby tego nie przegapić!</p>
             <button id="btn-newsletter" class="btn btn-outline-secondary btn-lg">Zapisz mnie!</button>
         </div>
@@ -83,10 +85,10 @@
                     <h6 class="text-uppercase font-weight-bold">Social media</h6>
                     <p>
                         <a href="https://www.instagram.com/therock/">
-                            <img src="icons/instagram.png" height="80px" width="80px" alt="instagram">
+                            <img src="icons/instagram.png" id="ig-icon" alt="instagram">
                         </a>
                         <a href="https://twitter.com/TheRock">
-                            <img src="icons/twitter.png" height="80px" width="80px" alt="twitter">
+                            <img src="icons/twitter.png" id="tt-icon" alt="twitter">
                         </a>
                         <a href="https://www.youtube.com/channel/UCLqiVhDT4QvHbKpaDCbokfw">
                             <img src="icons/youtube.png" alt="youtube">
@@ -94,7 +96,7 @@
                     </p>
                 </div>
             </div>
-	</div>
+        </div>
         <div class="footer-copyright text-center">© 2022 Copyright: therock.pl</div>
     </footer>
     <script src='js/jquery-3.6.0.js'></script>
