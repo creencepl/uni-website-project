@@ -13,7 +13,7 @@ $("#btn-newsletter").click(function() {
 var QUESTIONS = [
     ["W którym roku Dwayne zadebiutował na ringu?", "1996"],
     ["Jak nazywa się bohater, w którego Dwayne wciela się w serii 'Szybcy i wściekli'?", "Luke Hobbs"],
-    ["W 2021 roku Dwayne wystąpił z tą aktorką w filmie 'Czerwona nota'. Jakie się ona nazywa?", "Gal Gadot"],
+    ["W 2021 roku Dwayne wystąpił z tą aktorką w filmie 'Czerwona nota'. Jak się ona nazywa?", "Gal Gadot"],
     ["Nazwa serialu HBO, w którym od 2015 do 2019 grał Dwayne.", "Gracze"],
     ["W którym roku urodził się 'The Rock'?", "1972"],
     ["W jakim filmie zadebiutował Johnson?", "Mumia powraca"],
@@ -75,6 +75,7 @@ function quiz(){
 }
 
 // LOSUJ FILM
+// Każde wejście na stronę powoduje wylosowanie filmu z listy
 // Opisy i zdjęcia zapożyczone z serwisu filmweb.pl
 
 var MOVIES = [
@@ -103,4 +104,19 @@ function insert_data(){
 	document.getElementById("tytul").innerHTML = MOVIES[movie_number][0] + " (" + MOVIES[movie_number][1] + ")";
 	document.getElementById("plakat").src = "img/movies/" + MOVIES[movie_number][2];
 	document.getElementById("opis").innerHTML = MOVIES[movie_number][3];
+}
+
+// Prosta walidacja contact form
+
+function send_message(){
+	let name = document.getElementById("txtName").value;
+	let email = document.getElementById("txtEmail").value;
+	let phone = document.getElementById("txtPhone").value;
+	let msg = document.getElementById("txtMsg").value;
+	if(name && email && phone && msg){
+		alert("Twoja wiadomość została wysłana!");
+	}
+	else{
+		alert("Uzupełnij wszystkie dane!");
+	}
 }
