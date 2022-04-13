@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 </head>
 
-<body>
+<body id="kontakt-body">
     <nav class="navbar navbar-expand-md">
         <a class="navbar-brand" href="index.html"><img id="logo" src="img/logo.png" alt="logo"></a>
         <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
@@ -25,6 +25,9 @@
                     <a class="nav-link" href="o-nas.html">O nas</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="filmoteka.html">Filmoteka</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="quiz.html">Quiz</a>
                 </li>
                 <li class="nav-item">
@@ -37,14 +40,35 @@
         </div>
     </nav>
 
-    <!--
-    <header class="page-header header container-fluid kontakt">
-        <div class="overlay"></div>
-        <div class="description">
-            
+    <div class="container contact-form">
+        <div class="contact-image">
+            <img src="img/rocket_contact.png" alt="rocket_contact"/>
         </div>
-    </header>
-    -->
+        <form method="post">
+            <h3>Zostaw nam wiadomość</h3>
+           <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="txtName" id="txtName" class="form-control" placeholder="Twoje imię *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="txtEmail" id="txtEmail" class="form-control" placeholder="Twój email *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="txtPhone" id="txtPhone" class="form-control" placeholder="Numer telefonu *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="btnSubmit" class="btnContact" value="Wyślij" onclick="send_message();"/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <textarea name="txtMsg" id="txtMsg" class="form-control" placeholder="Twoja wiadomość *" style="width: 100%; height: 150px;"></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 
     <footer class="page-footer">
         <div class="container">
@@ -57,10 +81,10 @@
                     <h6 class="text-uppercase font-weight-bold">Social media</h6>
                     <p>
                         <a href="https://www.instagram.com/therock/">
-                            <img src="icons/instagram.png" height="80px" width="80px" alt="instagram">
+                            <img src="icons/instagram.png" id="ig-icon" alt="instagram">
                         </a>
                         <a href="https://twitter.com/TheRock">
-                            <img src="icons/twitter.png" height="80px" width="80px" alt="twitter">
+                            <img src="icons/twitter.png" id="tt-icon" alt="twitter">
                         </a>
                         <a href="https://www.youtube.com/channel/UCLqiVhDT4QvHbKpaDCbokfw">
                             <img src="icons/youtube.png" alt="youtube">
@@ -68,7 +92,7 @@
                     </p>
                 </div>
             </div>
-	</div>
+        </div>
         <div class="footer-copyright text-center">© 2022 Copyright: therock.pl</div>
     </footer>
     <script src='js/jquery-3.6.0.js'></script>
