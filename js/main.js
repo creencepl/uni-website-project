@@ -107,7 +107,7 @@ function insert_data(){
 }
 
 // Prosta walidacja contact form
-
+/*
 function send_message(){
 	let name = document.getElementById("txtName").value;
 	let email = document.getElementById("txtEmail").value;
@@ -120,3 +120,4 @@ function send_message(){
 		alert("Uzupełnij wszystkie dane!");
 	}
 }
+*/
