@@ -52,10 +52,10 @@
                         <input type="text" name="txtName" id="txtName" class="form-control" placeholder="Twoje imię *" value="" />
                     </div>
                     <div class="form-group">
-                        <input type="text" name="txtEmail" id="txtEmail" class="form-control" placeholder="Twój email *" value="" />
+                        <input type="email" name="txtEmail" id="txtEmail" class="form-control" placeholder="Twój email *" value="" />
                     </div>
                     <div class="form-group">
-                        <input type="text" name="txtPhone" id="txtPhone" class="form-control" placeholder="Numer telefonu *" value="" />
+                        <input type="tel" name="txtPhone" id="txtPhone" class="form-control" placeholder="np. 123-456-789" value="" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"/>
                     </div>
                     <div class="form-group">
                         <input type="submit" name="btnSubmit" class="btnContact" value="Wyślij" onclick="send_message();"/>
